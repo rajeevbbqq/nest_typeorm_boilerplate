@@ -2,7 +2,7 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
   
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a> and built in support of 
+  <p align="center">Boiler plate of <a href="https://docs.nestjs.com/" target="blank">Nest.js</a> framework, An efficient and scalable Node.Js server-side applications and built in support of 
   <a href="https://typeorm.io/#/" target="blank">TypeOrm</a> with migrations and Hot module reload.</p>
 
 ## Description
@@ -46,12 +46,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
