@@ -26,7 +26,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository with Typeorm support along with Migrations.
 
 ## Installation
 
@@ -42,6 +42,12 @@ $ npm run start
 
 # watch mode
 $ npm run start:dev
+
+# generate migrations
+$ npm run migration:generate migrationName
+
+# run migrations
+$ npm run migrate
 
 # production mode
 $ npm run start:prod
