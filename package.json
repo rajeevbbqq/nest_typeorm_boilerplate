@@ -1,8 +1,8 @@
 {
-  "name": "apikit",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "name": "Nest-Typeorm",
+  "version": "1.0.0",
+  "description": "Nest.Js with TypeORM support and Hot module reload ready boilerplate",
+  "author": "Rajeev Bbqq",
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json",
