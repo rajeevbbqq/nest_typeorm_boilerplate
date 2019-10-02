@@ -9,10 +9,12 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { RedisClient } from './features/redis/redis-client';
 
+const type: any = toString(process.env.DB_TYPE);
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: toString(process.env.DB_TYPE),
+      type,
       host: process.env.DB_HOST,
       port: toNumber(process.env.DB_PORT),
       username: process.env.DB_USER,
