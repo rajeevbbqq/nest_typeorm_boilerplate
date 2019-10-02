@@ -11,6 +11,8 @@ import { AppService } from './app.service';
 import { RedisClient } from './features/redis/redis-client';
 import { AppJob } from './app.job';
 
+const type: any = toString(process.env.DB_TYPE);
+
 @Module({
   imports: [
     BullModule.register({
@@ -18,7 +20,7 @@ import { AppJob } from './app.job';
       options: {},
     }),
     TypeOrmModule.forRoot({
-      type: toString(process.env.DB_TYPE),
+      type,
       host: process.env.DB_HOST,
       port: toNumber(process.env.DB_PORT),
       username: process.env.DB_USER,
