@@ -18,6 +18,17 @@ import { AppService } from './app.service';
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
       entities: [join(__dirname, '**/**.entity{.ts,.js}')],
+      cache: {
+        type: 'ioredis',
+        options: {
+          port: process.env.REDIS_PORT,
+          host: process.env.REDIS_HOST,
+          family: process.env.REDIS_DB_FAMILY,
+          password: process.env.REDIS_PASSWORD,
+          keyPrefix: process.env.REDIS_DB_PREFIX,
+          db: process.env.REDIS_DB_NAME,
+        },
+      },
       synchronize: false,
       logging: true,
     }),
