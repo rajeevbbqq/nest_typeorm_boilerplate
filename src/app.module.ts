@@ -4,13 +4,19 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { toNumber, toString } from 'lodash';
+import { BullModule } from 'nest-bull';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { RedisClient } from './features/redis/redis-client';
+import { AppJob } from './app.job';
 
 @Module({
   imports: [
+    BullModule.register({
+      name: 'test-queue',
+      options: {},
+    }),
     TypeOrmModule.forRoot({
       type: toString(process.env.DB_TYPE),
       host: process.env.DB_HOST,
@@ -35,6 +41,6 @@ import { RedisClient } from './features/redis/redis-client';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService, RedisClient],
+  providers: [AppService, RedisClient, AppJob],
 })
 export class AppModule {}
