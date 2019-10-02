@@ -7,6 +7,7 @@ import { toNumber, toString } from 'lodash';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { RedisClient } from './features/redis/redis-client';
 
 @Module({
   imports: [
@@ -34,6 +35,6 @@ import { AppService } from './app.service';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, RedisClient],
 })
 export class AppModule {}
